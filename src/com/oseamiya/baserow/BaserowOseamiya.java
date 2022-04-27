@@ -207,11 +207,11 @@ public class BaserowOseamiya extends AndroidNonvisibleComponent {
 
     @SimpleEvent
     public void GotColumn(YailList values, int counts, YailList rowIds, Object response) {
-        EventDispatcher.dispatchEvent(this, "GotColumn", values, counts, rowIds, response);
         resetGetColumn();
         if (autoReset) {
             resetFilterAndSearches();
         }
+        EventDispatcher.dispatchEvent(this, "GotColumn", values, counts, rowIds, response);
     }
 
     @SimpleFunction
@@ -334,11 +334,11 @@ public class BaserowOseamiya extends AndroidNonvisibleComponent {
 
     @SimpleEvent
     public void GotAllRows(YailList values, int counts, YailList rowIds, Object response) {
-        EventDispatcher.dispatchEvent(this, "GotAllRows", values, counts, rowIds, response);
         resetGetAllRows();
         if (autoReset) {
             resetFilterAndSearches();
         }
+        EventDispatcher.dispatchEvent(this, "GotAllRows", values, counts, rowIds, response);
     }
 
     @SimpleFunction
